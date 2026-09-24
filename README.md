@@ -29,5 +29,3 @@ This project was created as a personal software development project to practice 
 ## Author
 
 **Omar Farouk**
-
-GitHub: [Your GitHub Profile](https://github.com/omfarouk01)
