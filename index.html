@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My To-Do List</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      margin-left: 5px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My To-Do List</h1>
+
+  <input id="taskInput" placeholder="Type a task">
+  <button onclick="addTask()">Add</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const list = document.getElementById("taskList");
+
+      if (input.value === "") {
+        return;
+      }
+
+      const item = document.createElement("li");
+      const taskText = document.createElement("span");
+      taskText.textContent = input.value;
+
+      const doneButton = document.createElement("button");
+      doneButton.textContent = "Done";
+      doneButton.onclick = function () {
+        taskText.classList.toggle("completed");
+      };
+
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "Delete";
+      deleteButton.onclick = function () {
+        item.remove();
+      };
+
+      item.appendChild(taskText);
+      item.appendChild(doneButton);
+      item.appendChild(deleteButton);
+      list.appendChild(item);
+
+      input.value = "";
+    }
+  </script>
+</body>
+</html>
