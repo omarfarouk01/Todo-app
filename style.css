@@ -1,21 +1,50 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 40px 20px;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 input {
-    padding: 10px;
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 15px;
+    padding: 12px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
 button {
-    padding: 10px;
-    font-size: 16px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
     margin-left: 5px;
 }
 
+input + button {
+    display: block;
+    margin: 0 auto 25px;
+}
+
 li {
-    margin: 10px 0;
+    background: white;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 8px;
+    list-style: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .completed {
