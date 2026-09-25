@@ -8,7 +8,6 @@ function addTask() {
 
     const item = document.createElement("li");
     const taskText = document.createElement("span");
-
     taskText.textContent = input.value;
 
     const doneButton = document.createElement("button");
@@ -28,7 +27,6 @@ function addTask() {
     item.appendChild(taskText);
     item.appendChild(doneButton);
     item.appendChild(deleteButton);
-
     list.appendChild(item);
 
     input.value = "";
